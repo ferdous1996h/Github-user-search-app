@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+}
+:root {
+  --Blue: hsl(212, 100%, 50%);
+  --Light_blue: hsl(217, 20%, 51%);
+  --Dark_blue: hsl(217, 35%, 45%);
+  --Darkerblue: hsl(222, 41%, 20%);
+  --Verydark_blue: hsl(217, 21%, 21%);
+  --main_Background: hsl(220, 40%, 13%);
+  --Verylight_blue: hsl(227, 100%, 98%);
+  --White: hsl(0, 0%, 100%);
+}
+.darkSwitchCSS{
+  --Blue: hsl(212, 100%, 50%);
+  /* --Light_blue: hsla(218, 64%, 89%, 0.568);
+  --Dark_blue: hsl(217, 35%, 45%); */
+  --Darkerblue: hsl(218, 46%, 92%);
+  --main_Background: hsl(0, 0%, 100%);
+  --Verylight_blue: hsl(227, 100%, 98%);
+  --White: hsl(0, 0%, 0%);
+}
+.app_main {
+  background-color: var(--main_Background);
+  color: var(--White);
+  height: 100dvh;
+  padding: 3% 5%;
+}
+.brandName {
+  font-size: xx-large;
+}
+.theme_name {
+  text-transform: uppercase;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.theme {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.theme_name {
+  font-weight: 1000;
+}
+.theme_icon {
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+.theme_icon svg {
+  height: 100%;
+  width: 100%;
+}
+.searchSpace {
+  padding-top: 20px;
+}
+.searchSpace_input {
+  border-radius: 12px;
+  position: relative;
+}
+.searchSpace_input input {
+  background-color: var(--Darkerblue);
+  width: 100%;
+  border-radius: inherit;
+  height: 40px;
+  padding-left: 40px;
+  caret-color: var(--White);
+  color: var(--White);
+}
+.searchSpace_input input::placeholder{
+  color: var(--White);
+}
+.main_input::placeholder {
+}
+.searchSpace_input button {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  border-radius: inherit;
+  border: none;
+  background-color: var(--Blue);
+  color: white;
+  height: 100%;
+  padding: 0 15px;
+}
+.search_icon {
+  position: absolute;
+  left: 2%;
+  top: 10%;
+  height: 30px;
+  width: 30px;
+  color: var(--Blue);
+}
+.card_Head {
+  display: flex;
+  gap: 20px;
+}
+.card_Head--img {
+  height: 80px;
+  width: 80px;
+}
+.card_Head--img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 500px;
+  object-fit: cover;
+}
+.card_Main {
+  padding: 5%;
+  background-color: var(--Darkerblue);
+  border-radius: 15px;
+  margin-top: 5%;
+}
+.userName {
+  color: var(--Blue);
+}
+.bio {
+  padding-top: 15px;
+}
+.gitHUpdateInfo {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--main_Background);
+  padding: 5%;
+  margin-top: 20px;
+  border-radius: 16px;
+}
+.card_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+.placeLink {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.placeLink a {
+  color: var(--White);
+  text-decoration: none;
+}
+
+@media (min-width: 765px) {
+  .card_footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .searchSpace_input input{
+    padding-left: 65px;
+  }
+}
+@media (min-width:1200px) {
+  .app_main{
+    padding-top: 20px;
+  }
+  .card_Main{
+    padding-top: 30px;
+  }
+}
