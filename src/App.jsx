@@ -25,7 +25,7 @@ export default function App() {
         } else {
           throw new Error('User not found');
         }
-        setTimeout(() => 'loading', 5000);
+        // setTimeout(() => 'loading', 5000);
       } catch (err) {
         setError(err?.message);
       } finally {
