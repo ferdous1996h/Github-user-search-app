@@ -34,7 +34,7 @@ preferences. Hint: Research prefers-color-scheme in CSS.
 
 ### Screenshot
 
-![AppScrnshot]()
+![AppScrnshot](./public/Screenshot.png)
 
 ## My process
 
@@ -59,3 +59,5 @@ preferences. Hint: Research prefers-color-scheme in CSS.
 - how to watch and access error object using
   **_Object.getOwnPropertyDescriptors()_** and get error message.
 - how to use use custom **'react-loader-spinner'** component for loading.
+- how to use 'react-error-boundary' component to return back to previous of the
+  app from error

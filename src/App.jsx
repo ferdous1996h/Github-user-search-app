@@ -27,13 +27,7 @@ export default function App() {
         }
         setTimeout(() => 'loading', 5000);
       } catch (err) {
-        if (typeof err === 'object') {
-          console.log(Object.getOwnPropertyDescriptors(err));
-          console.log(Object.getOwnPropertyNames(err));
-          setError(err?.message || 'Something is wrong');
-        } else {
-          setError(err || 'Something is wrong');
-        }
+        setError(err?.message);
       } finally {
         setLoading(false);
       }
@@ -53,7 +47,7 @@ export default function App() {
         color="#e15b64"
       />
     );
-  if (error) return <h1>{error}</h1>;
+  if (error) throw new Error(error);
   return (
     <main className="app_main" ref={darkSwitchRef}>
       <Header darkSwitchRef={darkSwitchRef} />
